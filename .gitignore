@@ -1,0 +1,17 @@
+/build/
+/backup/
+/gen/
+/dl/
+/oracle/src/
+*.bin
+*.img
+*.wad
+*.WAD
+*.whx
+*.elf
+*.DAT
+*.dat
+*.DMC
+*.o
+*.d
+__pycache__/
