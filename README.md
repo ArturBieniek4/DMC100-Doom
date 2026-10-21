@@ -304,9 +304,10 @@ meter has one USB port: unplug the controller before Options, USB drive.
 Options, Benchmark asks first, then ends the game and plays each demo twice with the buzzer
 muted: once without drawing, with a hash of the game state of every tic that can be compared
 with the host engine, and once drawing every frame, timed. MODE stops the run, POWER held for
-2 s switches the meter off. The results screen shows the frame rate of each demo. On it SAVE
-goes back to the title screen, MODE runs the demos again and HOLD opens the data drive on
-USB.
+2 s switches the meter off. The results screen shows the frame rate of each demo when the
+firmware drive has a `DOOMRES.DAT` (see below), without one it only says that the results are
+not saved. On it SAVE goes back to the title screen, MODE runs the demos again and HOLD opens
+the data drive on USB.
 
 DEMO1 is part of the game data. `DEMO2.LMP` to `DEMO4.LMP` are played as well when they are
 in the root folder of the data drive. They must be v1.9 demos of one player on a map of
@@ -331,13 +332,14 @@ nor-images` builds both files).
 - Episode 1 of Freedoom: Phase 1 or of your own WAD only, single player.
 - Low detail (160 columns, each drawn twice), no automap, no Nightmare skill.
 - No music. Sound effects are the PC speaker versions, one at a time, on the buzzer.
-- 24 frames per second on average in the heaviest case measured on the meter (Freedoom's
-  DEMO1: E1M6 on Hurt Me Plenty, half of the frames under 39 ms), with the NOR flash read at
-  72 MHz. The default build reads it at 36 MHz instead (`PLAT_NOR_SLOW=0` selects 72 MHz):
-  at 72 MHz 2 of the 4 KB blocks in 1 GB read on the meter came back wrong, at 36 MHz none,
-  and a wrong byte stops the game with a data error. The frame rate at 36 MHz has not been
-  measured yet, the Benchmark shows the figure of your build. Lighter areas run faster,
-  large open ones slower.
+- 29 frames per second on average with the default build in the DEMO1 of the shareware
+  `DOOM1.WAD` (E1M5 on Hurt Me Plenty). The heaviest case measured, Freedoom's DEMO1 (E1M6 on
+  Hurt Me Plenty), ran at 24 frames per second on average (half of the frames under 39 ms)
+  with the NOR flash read at 72 MHz. The default build reads it at 36 MHz instead
+  (`PLAT_NOR_SLOW=0` selects 72 MHz): at 72 MHz 2 of the 4 KB blocks in 1 GB read on the meter
+  came back wrong, at 36 MHz none, and a wrong byte stops the game with a data error.
+  Freedoom's DEMO1 at 36 MHz has not been measured yet, the Benchmark shows the figure of your
+  build. Lighter areas run faster, large open ones slower.
 
 ## Tests
 
