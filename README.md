@@ -1,4 +1,5 @@
 # DOOM for the FNIRSI DMC-100
+<a href="https://www.youtube.com/watch?v=KMTd9A_3Dr4"><img src="https://github.com/user-attachments/assets/NEW-ID" alt="DOOM running on the FNIRSI DMC-100" width="480"></a>
 
 DOOM running on the FNIRSI DMC-100 clamp meter: the DOOM engine (doomgeneric, derived from id
 Software's GPL source release) on an Artery AT32F415 with 32 KB of RAM, 99 KB (101,376 bytes)
